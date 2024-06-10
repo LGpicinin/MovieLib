@@ -1,0 +1,13 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 1em;
+}
+
+#navbar a{
+    font-size: 2em;
+}
+
+.search input{
+    margin-right: 5px;
+}
