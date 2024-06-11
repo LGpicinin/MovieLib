@@ -5,10 +5,13 @@ const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 // interfaces
 import { IMovieDetails } from "../../interfaces/MovieDetails";
+// components
+import MovieCard from "../../components/MovieCard/MovieCard";
+// styles
+import './Home.css'
 
-type Props = {}
 
-const Home = (props: Props) => {
+const Home = () => {
 
     const [movies, setMovies] = useState([])
 
@@ -31,14 +34,12 @@ const Home = (props: Props) => {
 
     return (
         <div>
-            <h2>Filmes mais bem avaliados:</h2>
-            {movies && movies.map((movie: IMovieDetails) => (
-                <>
-                    <div key={movie.id}>
-                        <h3>{movie.title}</h3>
-                    </div>
-                </>
-            ))}
+            <h2 className="title">Filmes mais bem avaliados:</h2>
+            <div className="movie-container">
+                {movies && movies.map((movie: IMovieDetails) => (
+                    <MovieCard key={movie.id} movie={movie} showLink={true}/>
+                ))}
+            </div>
         </div>
     )
 }

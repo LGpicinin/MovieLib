@@ -1,13 +1,42 @@
 #navbar{
     display: flex;
     justify-content: space-between;
-    margin: 0.5em 1em;
+    padding: 1rem 2rem;
+    align-items: center;
+    background-color: #121212;
 }
 
-#navbar a{
-    font-size: 2em;
+#navbar h2 a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.search input{
-    margin-right: 5px;
+#navbar form{
+    display: flex;
+    gap: .5rem;
+}
+
+#navbar input{
+    padding: .2rem .5rem;
+    border-radius: 4px;
+    border: none;
+}
+
+#navbar button{
+    background-color: aqua;
+    color: #000;
+    font-size: 1.3rem;
+    padding: .3rem;
+    border: 2px solid aqua;
+    border-radius: 4px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#navbar button:hover{
+    background-color: transparent;
+    color: aqua;
 }
