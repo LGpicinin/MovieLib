@@ -1,5 +1,5 @@
 // interfaces
-import { IMovieDetails } from "../../interfaces/MovieDetails"
+import { IMovieCard } from "../../interfaces/MovieDetails"
 // styles
 import './MovieCard.css'
 // icons
@@ -10,14 +10,14 @@ import { Link } from "react-router-dom"
 const imageUrl = import.meta.env.VITE_IMG
 
 type Props = {
-    movie: IMovieDetails;
+    movie: IMovieCard;
     showLink: boolean;
 }
 
 const MovieCard = ({ movie, showLink = true }: Props) => {
   return (
     <div className="movie-card">
-        <img src={imageUrl + movie.poster_path} alt={movie.title} />
+        {movie.poster_path && <img src={imageUrl + movie.poster_path} alt={movie.title} />}
         <h2>{movie.title}</h2>
         <p>
             <FaStar/> {movie.vote_average}

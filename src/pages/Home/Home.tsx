@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 // interfaces
-import { IMovieDetails } from "../../interfaces/MovieDetails";
+import { IMovieCard } from "../../interfaces/MovieDetails";
 // components
 import MovieCard from "../../components/MovieCard/MovieCard";
 // styles
@@ -36,7 +36,7 @@ const Home = () => {
         <div>
             <h2 className="title">Filmes mais bem avaliados:</h2>
             <div className="movie-container">
-                {movies && movies.map((movie: IMovieDetails) => (
+                {movies && movies.map((movie: IMovieCard) => (
                     <MovieCard key={movie.id} movie={movie} showLink={true}/>
                 ))}
             </div>
